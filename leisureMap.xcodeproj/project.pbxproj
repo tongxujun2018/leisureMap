@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD0F464C2108575E00531B8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F464B2108575E00531B8F /* AppDelegate.swift */; };
+		AD0F464E2108575E00531B8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F464D2108575E00531B8F /* ViewController.swift */; };
+		AD0F46512108575E00531B8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0F464F2108575E00531B8F /* Main.storyboard */; };
+		AD0F46532108576100531B8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD0F46522108576100531B8F /* Assets.xcassets */; };
+		AD0F46562108576100531B8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0F46542108576100531B8F /* LaunchScreen.storyboard */; };
+		AD0F46612108576100531B8F /* leisureMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F46602108576100531B8F /* leisureMapTests.swift */; };
+		AD0F466C2108576100531B8F /* leisureMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F466B2108576100531B8F /* leisureMapUITests.swift */; };
+		AD0F467E21085A6C00531B8F /* masterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F467D21085A6C00531B8F /* masterViewController.swift */; };
+		AD0F468021085A8100531B8F /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F467F21085A8100531B8F /* detailViewController.swift */; };
+		AD0F468221085A8E00531B8F /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468121085A8E00531B8F /* mapViewController.swift */; };
+		AD0F468421085A9C00531B8F /* noteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468321085A9C00531B8F /* noteViewController.swift */; };
+		AD0F468621085AD600531B8F /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468521085AD600531B8F /* loginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD0F465D2108576100531B8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD0F46402108575D00531B8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD0F46472108575D00531B8F;
+			remoteInfo = leisureMap;
+		};
+		AD0F46682108576100531B8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD0F46402108575D00531B8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD0F46472108575D00531B8F;
+			remoteInfo = leisureMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD0F46482108575D00531B8F /* leisureMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leisureMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0F464B2108575E00531B8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD0F464D2108575E00531B8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD0F46502108575E00531B8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD0F46522108576100531B8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD0F46552108576100531B8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD0F46572108576100531B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0F465C2108576100531B8F /* leisureMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = leisureMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0F46602108576100531B8F /* leisureMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leisureMapTests.swift; sourceTree = "<group>"; };
+		AD0F46622108576100531B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0F46672108576100531B8F /* leisureMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = leisureMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0F466B2108576100531B8F /* leisureMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leisureMapUITests.swift; sourceTree = "<group>"; };
+		AD0F466D2108576100531B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0F467D21085A6C00531B8F /* masterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = masterViewController.swift; sourceTree = "<group>"; };
+		AD0F467F21085A8100531B8F /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		AD0F468121085A8E00531B8F /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		AD0F468321085A9C00531B8F /* noteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteViewController.swift; sourceTree = "<group>"; };
+		AD0F468521085AD600531B8F /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD0F46452108575D00531B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0F46592108576100531B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0F46642108576100531B8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD0F463F2108575D00531B8F = {
+			isa = PBXGroup;
+			children = (
+				AD0F464A2108575D00531B8F /* leisureMap */,
+				AD0F465F2108576100531B8F /* leisureMapTests */,
+				AD0F466A2108576100531B8F /* leisureMapUITests */,
+				AD0F46492108575D00531B8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD0F46492108575D00531B8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F46482108575D00531B8F /* leisureMap.app */,
+				AD0F465C2108576100531B8F /* leisureMapTests.xctest */,
+				AD0F46672108576100531B8F /* leisureMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD0F464A2108575D00531B8F /* leisureMap */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F467C210859FE00531B8F /* NoteFlow */,
+				AD0F467B210859EB00531B8F /* MapFlow */,
+				AD0F467A210858AD00531B8F /* Master-detail */,
+				AD0F46792108583E00531B8F /* LoginFlow */,
+				AD0F464B2108575E00531B8F /* AppDelegate.swift */,
+				AD0F464D2108575E00531B8F /* ViewController.swift */,
+				AD0F464F2108575E00531B8F /* Main.storyboard */,
+				AD0F46522108576100531B8F /* Assets.xcassets */,
+				AD0F46542108576100531B8F /* LaunchScreen.storyboard */,
+				AD0F46572108576100531B8F /* Info.plist */,
+			);
+			path = leisureMap;
+			sourceTree = "<group>";
+		};
+		AD0F465F2108576100531B8F /* leisureMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F46602108576100531B8F /* leisureMapTests.swift */,
+				AD0F46622108576100531B8F /* Info.plist */,
+			);
+			path = leisureMapTests;
+			sourceTree = "<group>";
+		};
+		AD0F466A2108576100531B8F /* leisureMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F466B2108576100531B8F /* leisureMapUITests.swift */,
+				AD0F466D2108576100531B8F /* Info.plist */,
+			);
+			path = leisureMapUITests;
+			sourceTree = "<group>";
+		};
+		AD0F46792108583E00531B8F /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F468521085AD600531B8F /* loginViewController.swift */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		AD0F467A210858AD00531B8F /* Master-detail */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F467D21085A6C00531B8F /* masterViewController.swift */,
+				AD0F467F21085A8100531B8F /* detailViewController.swift */,
+			);
+			path = "Master-detail";
+			sourceTree = "<group>";
+		};
+		AD0F467B210859EB00531B8F /* MapFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F468121085A8E00531B8F /* mapViewController.swift */,
+			);
+			path = MapFlow;
+			sourceTree = "<group>";
+		};
+		AD0F467C210859FE00531B8F /* NoteFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AD0F468321085A9C00531B8F /* noteViewController.swift */,
+			);
+			path = NoteFlow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD0F46472108575D00531B8F /* leisureMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0F46702108576100531B8F /* Build configuration list for PBXNativeTarget "leisureMap" */;
+			buildPhases = (
+				AD0F46442108575D00531B8F /* Sources */,
+				AD0F46452108575D00531B8F /* Frameworks */,
+				AD0F46462108575D00531B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = leisureMap;
+			productName = leisureMap;
+			productReference = AD0F46482108575D00531B8F /* leisureMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD0F465B2108576100531B8F /* leisureMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0F46732108576100531B8F /* Build configuration list for PBXNativeTarget "leisureMapTests" */;
+			buildPhases = (
+				AD0F46582108576100531B8F /* Sources */,
+				AD0F46592108576100531B8F /* Frameworks */,
+				AD0F465A2108576100531B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD0F465E2108576100531B8F /* PBXTargetDependency */,
+			);
+			name = leisureMapTests;
+			productName = leisureMapTests;
+			productReference = AD0F465C2108576100531B8F /* leisureMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD0F46662108576100531B8F /* leisureMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD0F46762108576100531B8F /* Build configuration list for PBXNativeTarget "leisureMapUITests" */;
+			buildPhases = (
+				AD0F46632108576100531B8F /* Sources */,
+				AD0F46642108576100531B8F /* Frameworks */,
+				AD0F46652108576100531B8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD0F46692108576100531B8F /* PBXTargetDependency */,
+			);
+			name = leisureMapUITests;
+			productName = leisureMapUITests;
+			productReference = AD0F46672108576100531B8F /* leisureMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD0F46402108575D00531B8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = tripim;
+				TargetAttributes = {
+					AD0F46472108575D00531B8F = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					AD0F465B2108576100531B8F = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = AD0F46472108575D00531B8F;
+					};
+					AD0F46662108576100531B8F = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = AD0F46472108575D00531B8F;
+					};
+				};
+			};
+			buildConfigurationList = AD0F46432108575D00531B8F /* Build configuration list for PBXProject "leisureMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD0F463F2108575D00531B8F;
+			productRefGroup = AD0F46492108575D00531B8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD0F46472108575D00531B8F /* leisureMap */,
+				AD0F465B2108576100531B8F /* leisureMapTests */,
+				AD0F46662108576100531B8F /* leisureMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD0F46462108575D00531B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0F46562108576100531B8F /* LaunchScreen.storyboard in Resources */,
+				AD0F46532108576100531B8F /* Assets.xcassets in Resources */,
+				AD0F46512108575E00531B8F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0F465A2108576100531B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0F46652108576100531B8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD0F46442108575D00531B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0F468621085AD600531B8F /* loginViewController.swift in Sources */,
+				AD0F468421085A9C00531B8F /* noteViewController.swift in Sources */,
+				AD0F467E21085A6C00531B8F /* masterViewController.swift in Sources */,
+				AD0F468221085A8E00531B8F /* mapViewController.swift in Sources */,
+				AD0F464E2108575E00531B8F /* ViewController.swift in Sources */,
+				AD0F464C2108575E00531B8F /* AppDelegate.swift in Sources */,
+				AD0F468021085A8100531B8F /* detailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0F46582108576100531B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0F46612108576100531B8F /* leisureMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD0F46632108576100531B8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD0F466C2108576100531B8F /* leisureMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD0F465E2108576100531B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD0F46472108575D00531B8F /* leisureMap */;
+			targetProxy = AD0F465D2108576100531B8F /* PBXContainerItemProxy */;
+		};
+		AD0F46692108576100531B8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD0F46472108575D00531B8F /* leisureMap */;
+			targetProxy = AD0F46682108576100531B8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD0F464F2108575E00531B8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD0F46502108575E00531B8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD0F46542108576100531B8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD0F46552108576100531B8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD0F466E2108576100531B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD0F466F2108576100531B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD0F46712108576100531B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = leisureMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripim.leisureMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD0F46722108576100531B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = leisureMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripim.leisureMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AD0F46742108576100531B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = leisureMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripim.leisureMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/leisureMap.app/leisureMap";
+			};
+			name = Debug;
+		};
+		AD0F46752108576100531B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = leisureMapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripim.leisureMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/leisureMap.app/leisureMap";
+			};
+			name = Release;
+		};
+		AD0F46772108576100531B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = leisureMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripim.leisureMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = leisureMap;
+			};
+			name = Debug;
+		};
+		AD0F46782108576100531B8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = leisureMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripim.leisureMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = leisureMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD0F46432108575D00531B8F /* Build configuration list for PBXProject "leisureMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0F466E2108576100531B8F /* Debug */,
+				AD0F466F2108576100531B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0F46702108576100531B8F /* Build configuration list for PBXNativeTarget "leisureMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0F46712108576100531B8F /* Debug */,
+				AD0F46722108576100531B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0F46732108576100531B8F /* Build configuration list for PBXNativeTarget "leisureMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0F46742108576100531B8F /* Debug */,
+				AD0F46752108576100531B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD0F46762108576100531B8F /* Build configuration list for PBXNativeTarget "leisureMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD0F46772108576100531B8F /* Debug */,
+				AD0F46782108576100531B8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD0F46402108575D00531B8F /* Project object */;
+}
