@@ -19,6 +19,7 @@
 		AD0F468221085A8E00531B8F /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468121085A8E00531B8F /* mapViewController.swift */; };
 		AD0F468421085A9C00531B8F /* noteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468321085A9C00531B8F /* noteViewController.swift */; };
 		AD0F468621085AD600531B8F /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468521085AD600531B8F /* loginViewController.swift */; };
+		AD4BA57B21087FEC008E2921 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BA57A21087FEC008E2921 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AD0F468121085A8E00531B8F /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		AD0F468321085A9C00531B8F /* noteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteViewController.swift; sourceTree = "<group>"; };
 		AD0F468521085AD600531B8F /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		AD4BA57A21087FEC008E2921 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				AD0F46522108576100531B8F /* Assets.xcassets */,
 				AD0F46542108576100531B8F /* LaunchScreen.storyboard */,
 				AD0F46572108576100531B8F /* Info.plist */,
+				AD4BA57A21087FEC008E2921 /* SplashViewController.swift */,
 			);
 			path = leisureMap;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				AD0F464E2108575E00531B8F /* ViewController.swift in Sources */,
 				AD0F464C2108575E00531B8F /* AppDelegate.swift in Sources */,
 				AD0F468021085A8100531B8F /* detailViewController.swift in Sources */,
+				AD4BA57B21087FEC008E2921 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

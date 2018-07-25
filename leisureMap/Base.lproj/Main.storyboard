@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XP5-I5-OFd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -61,16 +61,58 @@
                     <view key="view" contentMode="scaleToFill" id="wHV-dK-CqC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yBx-wp-LSJ">
+                                <rect key="frame" x="25" y="80" width="325" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ATu-72-xJs"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XP5-I5-OFd" id="BBW-kd-6Vw"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0P-x3-VWu">
+                                <rect key="frame" x="25" y="210" width="325" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XP5-I5-OFd" id="Oku-dJ-1IN"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xau-C0-azc">
+                                <rect key="frame" x="25" y="617" width="325" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yBx-wp-LSJ" firstAttribute="top" secondItem="ir5-f6-Xfz" secondAttribute="top" constant="60" id="D5u-Kw-OKa"/>
+                            <constraint firstItem="yBx-wp-LSJ" firstAttribute="leading" secondItem="ir5-f6-Xfz" secondAttribute="leading" constant="25" id="HD4-aw-tZJ"/>
+                            <constraint firstItem="W0P-x3-VWu" firstAttribute="centerX" secondItem="yBx-wp-LSJ" secondAttribute="centerX" id="L7G-JW-CCQ"/>
+                            <constraint firstItem="xau-C0-azc" firstAttribute="centerX" secondItem="wHV-dK-CqC" secondAttribute="centerX" id="R3f-Oc-WrZ"/>
+                            <constraint firstItem="xau-C0-azc" firstAttribute="width" secondItem="yBx-wp-LSJ" secondAttribute="width" id="SUM-rx-vv6"/>
+                            <constraint firstItem="ir5-f6-Xfz" firstAttribute="bottom" secondItem="xau-C0-azc" secondAttribute="bottom" constant="20" id="XRc-pG-Rzy"/>
+                            <constraint firstItem="W0P-x3-VWu" firstAttribute="top" secondItem="yBx-wp-LSJ" secondAttribute="bottom" constant="100" id="cdU-28-kTi"/>
+                            <constraint firstItem="W0P-x3-VWu" firstAttribute="height" secondItem="yBx-wp-LSJ" secondAttribute="height" id="n1j-09-wuH"/>
+                            <constraint firstItem="W0P-x3-VWu" firstAttribute="width" secondItem="yBx-wp-LSJ" secondAttribute="width" id="qwd-Dl-1E0"/>
+                            <constraint firstItem="ir5-f6-Xfz" firstAttribute="trailing" secondItem="yBx-wp-LSJ" secondAttribute="trailing" constant="25" id="shG-b3-hfs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ir5-f6-Xfz"/>
                     </view>
                     <connections>
+                        <outlet property="btnlogin" destination="xau-C0-azc" id="CJa-RG-NaV"/>
+                        <outlet property="txtaccount" destination="yBx-wp-LSJ" id="b59-kA-nWa"/>
+                        <outlet property="txtpassword" destination="W0P-x3-VWu" id="2ib-2H-RtG"/>
                         <segue destination="IVL-10-PYL" kind="show" id="PA4-eh-qVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUg-L5-Mvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="-168"/>
+            <point key="canvasLocation" x="-170.40000000000001" y="-168.6656671664168"/>
         </scene>
         <!--Master View Controller-->
         <scene sceneID="Eoe-ED-iBJ">
