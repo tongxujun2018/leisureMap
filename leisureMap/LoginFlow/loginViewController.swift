@@ -11,17 +11,63 @@
 
 import UIKit
 
-class loginViewController: UIViewController ,UITextFieldDelegate{
-
+class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDelgate{
+    func receviedReponse(_sender: AsyncRequestWorker, responseString: String, tag: Int) {
+        print(responseString)
+    }
+    
+    
     @IBOutlet weak var txtaccount: UITextField!
     @IBOutlet weak var txtpassword: UITextField!
     @IBOutlet weak var btnlogin: UIButton!
+    
+    var requestWorker:AsyncRequestWorker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        requestWorker=AsyncRequestWorker()
+        requestWorker?.responseDelegate=self
+        
+        let from = "https://score.azurewebsites.net/api/login/"
+        self.requestWorker?.getResponse(from: from, tag:1)
+
+
+        //https://score.azurewebsites.net/api/login/acc/pwd
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func btnLoginClicked(_ sender: UIButton) {
+        let  account=txtaccount.text!
+        let  password=txtpassword.text!
+        
+        
+        
+        let from = "https://score.azurewebsites.net/api/login/\(account)/\(password)"
+        
+        self.requestWorker?.getResponse(from: from, tag: 1)
+    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewDidAppear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewDidDisappear")
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let accept="abcdeABCDE"
         let cs=NSCharacterSet(charactersIn: accept).inverted
@@ -31,8 +77,6 @@ class loginViewController: UIViewController ,UITextFieldDelegate{
         if (string != filtered){
             return false
         }
-        
-        
         
         
         var maxlength : Int=0
