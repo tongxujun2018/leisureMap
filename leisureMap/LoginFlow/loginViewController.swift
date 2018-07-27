@@ -10,11 +10,16 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDelgate{
-    func receviedReponse(_sender: AsyncRequestWorker, responseString: String, tag: Int) {
-        print(responseString)
-    }
+class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDelgate,FileWorkerDelegate{
+   
+    
+    
+    
+    
+    
+ 
     
     
     @IBOutlet weak var txtaccount: UITextField!
@@ -22,16 +27,22 @@ class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDel
     @IBOutlet weak var btnlogin: UIButton!
     
     var requestWorker:AsyncRequestWorker?
+    var fileWorker: FileWorker?
+    let storeFileName: String="store.json"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+   
+        
         
         requestWorker=AsyncRequestWorker()
-        requestWorker?.responseDelegate=self
+        requestWorker?.responseDelegate = self
+        fileWorker=FileWorker()
+        fileWorker?.FileWorkerDelegate = self
         
-        let from = "https://score.azurewebsites.net/api/login/"
-        self.requestWorker?.getResponse(from: from, tag:1)
+        print("viewDidload")
+//        let from = "https://score.azurewebsites.net/api/login/"
+//        self.requestWorker?.getResponse(from: from, tag:1)
 
 
         //https://score.azurewebsites.net/api/login/acc/pwd
@@ -49,6 +60,19 @@ class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDel
         self.requestWorker?.getResponse(from: from, tag: 1)
     
     }
+    
+    func readServieCategory() {
+        let from = "https://score.azurewebsites.net/api/ServiceCategory"
+        self.requestWorker?.getResponse(from: from, tag: 2)
+    }
+    
+    func readStore() {
+        let from = "https://score.azurewebsites.net/api/Store"
+        self.requestWorker?.getResponse(from: from, tag: 3)
+    }
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -105,21 +129,94 @@ class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDel
         }
         return true
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func receviedReponse(_sender: AsyncRequestWorker, responseString: String, tag: Int) {
+        
+      //  print("\( tag ):\(responseString)")
+        
+        switch tag {
+            
+        case 1:
+            //login
+            self.readServieCategory()
+            break
+        case 2:
+            
+            //ServiceCategory
+            
+            do{
+                if let dataFromString = responseString.data(using: .utf8, allowLossyConversion: false) {
+                    
+                    let json = try JSON(data: dataFromString)
+                    
+                    let sqliteContext = SQLiteWorker()
+                    sqliteContext.createDatabase()
+                    sqliteContext.clearAll()
+                    
+
+                    for (_ ,subJson):(String, JSON) in json {
+                        
+                        let store:Store=Store()
+                        
+                        let serviceIndex:Int=subJson["serviceIndex"].intValue
+                        let name:String=subJson["name"].stringValue
+                        let index:Int=subJson["index"].intValue
+                        let imagePath : String  = subJson["imagePath"].stringValue
+                        
+                        
+                        let location:JSON = subJson["location"]
+                        let address:String = location["address"].stringValue
+                        let latitude:Double = location["latitude"].doubleValue
+                        let longitude:Double = location["longitude"].doubleValue
+
+                        store.ServiceIndex = serviceIndex
+                        store.Name = name
+                        store.Index = index
+                        store.ImagePath = imagePath
+
+                        store.StoreLocation=LocationDesc()
+                        store.StoreLocation?.Address=address
+                        store.StoreLocation?.LaTitude=latitude
+                        store.StoreLocation?.Longitude=longitude
+                        
+                        sqliteContext.insertData(_name: name, _imagepath: imagePath)
+                    }
+                       
+//                    let categories=sqliteContext.readData()
+//                    print(categories)
+                    
+                }
+            }catch{
+                
+                print(error)
+            }
+            
+            
+            self.readStore()
+            break
+
+        case 3:
+            //
+            
+
+            self.fileWorker?.writeToFile(content: responseString, fileName: storeFileName, tag: 1)
+            
+            break
+        default:
+            break
+        }
+     
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK:-
+    func fileWorkWriteCompleted(_ sender: FileWorker, fileName: String, tag: Int) {
+       print(fileName)
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "moveTomasterviewsegue", sender: self)
+        }
     }
-    */
-
+    
+    func fileWorkReadCompleted(_ sender: FileWorker, content: String, tag: Int) {
+        
+    }
 }
