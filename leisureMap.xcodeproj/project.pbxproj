@@ -23,6 +23,8 @@
 		AD0F468621085AD600531B8F /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0F468521085AD600531B8F /* loginViewController.swift */; };
 		AD11C88E2109CF2C001E1357 /* FileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD11C88D2109CF2C001E1357 /* FileWorker.swift */; };
 		AD4BA57B21087FEC008E2921 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BA57A21087FEC008E2921 /* SplashViewController.swift */; };
+		ADD5C783210C52B600432A59 /* abc.edu.gpx in Resources */ = {isa = PBXBuildFile; fileRef = ADD5C782210C52B600432A59 /* abc.edu.gpx */; };
+		ADD5C785210C69E900432A59 /* MapFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5C784210C69E800432A59 /* MapFlag.swift */; };
 		ADE330A0210AAAD900F03D04 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3309F210AAAD900F03D04 /* ServiceCategory.swift */; };
 		ADE330A2210AAB7200F03D04 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE330A1210AAB7200F03D04 /* Store.swift */; };
 		ADE330A7210AFFC800F03D04 /* ServiceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE330A6210AFFC800F03D04 /* ServiceCellView.swift */; };
@@ -75,6 +77,8 @@
 		AD0F468521085AD600531B8F /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		AD11C88D2109CF2C001E1357 /* FileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWorker.swift; sourceTree = "<group>"; };
 		AD4BA57A21087FEC008E2921 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		ADD5C782210C52B600432A59 /* abc.edu.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = abc.edu.gpx; sourceTree = "<group>"; };
+		ADD5C784210C69E800432A59 /* MapFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFlag.swift; sourceTree = "<group>"; };
 		ADE3309F210AAAD900F03D04 /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		ADE330A1210AAB7200F03D04 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		ADE330A6210AFFC800F03D04 /* ServiceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		AD0F463F2108575D00531B8F = {
 			isa = PBXGroup;
 			children = (
+				ADD5C782210C52B600432A59 /* abc.edu.gpx */,
 				AD0F464A2108575D00531B8F /* leisureMap */,
 				AD0F465F2108576100531B8F /* leisureMapTests */,
 				AD0F466A2108576100531B8F /* leisureMapUITests */,
@@ -209,6 +214,7 @@
 		AD0F467B210859EB00531B8F /* MapFlow */ = {
 			isa = PBXGroup;
 			children = (
+				ADD5C784210C69E800432A59 /* MapFlag.swift */,
 				AD0F468121085A8E00531B8F /* mapViewController.swift */,
 			);
 			path = MapFlow;
@@ -370,6 +376,7 @@
 			files = (
 				AD0F46562108576100531B8F /* LaunchScreen.storyboard in Resources */,
 				AD0F46532108576100531B8F /* Assets.xcassets in Resources */,
+				ADD5C783210C52B600432A59 /* abc.edu.gpx in Resources */,
 				AD0F46512108575E00531B8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADD5C785210C69E900432A59 /* MapFlag.swift in Sources */,
 				AD0F468621085AD600531B8F /* loginViewController.swift in Sources */,
 				ADFA1B64210BF53500B5EE57 /* SQLiteWorker.swift in Sources */,
 				ADE330A0210AAAD900F03D04 /* ServiceCategory.swift in Sources */,
