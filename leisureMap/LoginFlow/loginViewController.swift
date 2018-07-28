@@ -219,4 +219,6 @@ class loginViewController: UIViewController ,UITextFieldDelegate,AsyncRequestDel
     func fileWorkReadCompleted(_ sender: FileWorker, content: String, tag: Int) {
         
     }
+    
+
 }

@@ -248,7 +248,8 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="8Su-ZP-KCW"/>
                     <connections>
-                        <segue destination="1hQ-ZB-meE" kind="show" id="b6q-79-uL3"/>
+                        <outlet property="storeTable" destination="I2R-4e-7dJ" id="AdK-iW-NTg"/>
+                        <segue destination="1hQ-ZB-meE" kind="show" identifier="moveToDetailViewSegue" id="b6q-79-uL3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIf-V6-hh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
