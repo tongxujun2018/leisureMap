@@ -25,10 +25,10 @@
 		AD4BA57B21087FEC008E2921 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BA57A21087FEC008E2921 /* SplashViewController.swift */; };
 		ADE330A0210AAAD900F03D04 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE3309F210AAAD900F03D04 /* ServiceCategory.swift */; };
 		ADE330A2210AAB7200F03D04 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE330A1210AAB7200F03D04 /* Store.swift */; };
-		ADE330A4210ABEA200F03D04 /* SQLiteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE330A3210ABEA200F03D04 /* SQLiteWorker.swift */; };
 		ADE330A7210AFFC800F03D04 /* ServiceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE330A6210AFFC800F03D04 /* ServiceCellView.swift */; };
 		ADE330AB210B09D300F03D04 /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE330AA210B09D300F03D04 /* StoreCellView.swift */; };
 		ADE9C72F210961CF008103B0 /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE9C72E210961CF008103B0 /* NetWorker.swift */; };
+		ADFA1B64210BF53500B5EE57 /* SQLiteWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFA1B63210BF53500B5EE57 /* SQLiteWorker.swift */; };
 		D52239EF719DBD2A5133561C /* Pods_leisureMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D03B88F15995A68A987E37A /* Pods_leisureMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,10 +77,10 @@
 		AD4BA57A21087FEC008E2921 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		ADE3309F210AAAD900F03D04 /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		ADE330A1210AAB7200F03D04 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		ADE330A3210ABEA200F03D04 /* SQLiteWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteWorker.swift; path = "../../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/3f68b70eab3d88d6c6b258d3c2ad8f73/Message/MessageTemp/2cbd3748ec3baf67c2a2764a384850d5/File/SQLiteWorker.swift"; sourceTree = "<group>"; };
 		ADE330A6210AFFC800F03D04 /* ServiceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCellView.swift; sourceTree = "<group>"; };
 		ADE330AA210B09D300F03D04 /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
 		ADE9C72E210961CF008103B0 /* NetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
+		ADFA1B63210BF53500B5EE57 /* SQLiteWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteWorker.swift; sourceTree = "<group>"; };
 		D1737F49D838D417E75F3204 /* Pods-leisureMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leisureMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-leisureMap/Pods-leisureMap.release.xcconfig"; sourceTree = "<group>"; };
 		F93A32A1B201329BB867E76F /* Pods_leisureMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_leisureMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD668AD4F1BA8F4D1AAF0A9 /* Pods-leisureMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-leisureMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-leisureMapTests/Pods-leisureMapTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 		ADE9C72D2109618F008103B0 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				ADFA1B63210BF53500B5EE57 /* SQLiteWorker.swift */,
 				ADE9C72E210961CF008103B0 /* NetWorker.swift */,
-				ADE330A3210ABEA200F03D04 /* SQLiteWorker.swift */,
 				AD11C88D2109CF2C001E1357 /* FileWorker.swift */,
 			);
 			path = Worker;
@@ -416,11 +416,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-leisureMap/Pods-leisureMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -473,12 +475,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD0F468621085AD600531B8F /* loginViewController.swift in Sources */,
+				ADFA1B64210BF53500B5EE57 /* SQLiteWorker.swift in Sources */,
 				ADE330A0210AAAD900F03D04 /* ServiceCategory.swift in Sources */,
 				AD0F468421085A9C00531B8F /* noteViewController.swift in Sources */,
 				ADE330A2210AAB7200F03D04 /* Store.swift in Sources */,
 				AD0F467E21085A6C00531B8F /* masterViewController.swift in Sources */,
 				ADE330AB210B09D300F03D04 /* StoreCellView.swift in Sources */,
-				ADE330A4210ABEA200F03D04 /* SQLiteWorker.swift in Sources */,
 				AD11C88E2109CF2C001E1357 /* FileWorker.swift in Sources */,
 				AD0F468221085A8E00531B8F /* mapViewController.swift in Sources */,
 				AD0F464E2108575E00531B8F /* ViewController.swift in Sources */,

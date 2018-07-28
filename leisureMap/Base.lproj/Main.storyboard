@@ -146,7 +146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oiz-SH-roO">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Oiz-SH-roO">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-aa-TvJ">
@@ -185,19 +185,19 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I2R-4e-7dJ">
-                                <rect key="frame" x="8" y="222" width="359" height="361"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="403"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCellView" rowHeight="80" id="bEP-dX-Tki" customClass="StoreCellView" customModule="leisureMap" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="80"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bEP-dX-Tki" id="Ya0-dJ-JTx">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Liq-kQ-PKV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ai-nb-teT">
@@ -205,6 +205,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="329" id="gJg-gu-K3h"/>
                                                         <constraint firstAttribute="height" constant="28" id="jOa-iJ-vCm"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="swP-EZ-TXk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -217,7 +218,10 @@
                                                 <constraint firstItem="9Ai-nb-teT" firstAttribute="trailing" secondItem="Ya0-dJ-JTx" secondAttribute="trailingMargin" id="I8m-c4-msV"/>
                                                 <constraint firstItem="9Ai-nb-teT" firstAttribute="leading" secondItem="Ya0-dJ-JTx" secondAttribute="leadingMargin" id="JBx-by-EIP"/>
                                                 <constraint firstItem="9Ai-nb-teT" firstAttribute="top" secondItem="Ya0-dJ-JTx" secondAttribute="topMargin" constant="19" id="Joi-I1-yp0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9Ai-nb-teT" secondAttribute="trailing" id="Qcz-mX-uAt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9Ai-nb-teT" secondAttribute="bottom" constant="21" id="bhh-fn-nL5"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9Ai-nb-teT" secondAttribute="bottom" constant="11" id="cOO-yD-L3C"/>
+                                                <constraint firstItem="9Ai-nb-teT" firstAttribute="leading" secondItem="Ya0-dJ-JTx" secondAttribute="leadingMargin" id="nDY-bk-kv1"/>
                                                 <constraint firstItem="9Ai-nb-teT" firstAttribute="leading" secondItem="Ya0-dJ-JTx" secondAttribute="leadingMargin" id="ncT-7T-7xK"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -227,6 +231,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hvb-1V-zlN" id="04j-gD-qgm"/>
+                                    <outlet property="delegate" destination="hvb-1V-zlN" id="A0j-cV-WQw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -247,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="1378.4000000000001" y="-169.56521739130437"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="fG2-Ux-gZ3">
             <objects>
-                <viewController id="Pbk-K5-Pgi" customClass="detailViewController" customModule="leisureMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Pbk-K5-Pgi" customClass="noteViewController" customModule="leisureMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ak-mB-WHw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,4 +323,7 @@
             <point key="canvasLocation" x="536.79999999999995" y="-168.6656671664168"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="256" height="256"/>
+    </resources>
 </document>

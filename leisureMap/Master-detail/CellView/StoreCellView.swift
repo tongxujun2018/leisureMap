@@ -22,5 +22,12 @@ class StoreCellView: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func updateContent(store: Store)->Void{
+        lbName.text = store.Name
+        
+        
+        
+    }
 
 }
