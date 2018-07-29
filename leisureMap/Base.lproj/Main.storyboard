@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SWt-VP-AHL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -263,10 +263,25 @@
                     <view key="view" contentMode="scaleToFill" id="6ak-mB-WHw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-R2-1aC">
+                                <rect key="frame" x="16" y="64" width="343" height="30"/>
+                                <state key="normal" title="Photo"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gbh-R2-1aC" firstAttribute="leading" secondItem="ZR5-Da-CrL" secondAttribute="leading" constant="16" id="HL2-yZ-EKa"/>
+                            <constraint firstItem="ZR5-Da-CrL" firstAttribute="trailing" secondItem="gbh-R2-1aC" secondAttribute="trailing" constant="16" id="Wzf-dr-4Lw"/>
+                            <constraint firstItem="gbh-R2-1aC" firstAttribute="top" secondItem="ZR5-Da-CrL" secondAttribute="top" constant="64" id="vUZ-As-JBG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZR5-Da-CrL"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="btnPhoto" destination="gbh-R2-1aC" id="aaN-mH-JbW"/>
+                        <outlet property="btnPhotoClicked" destination="gbh-R2-1aC" id="yWm-xc-JBO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVt-08-hKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,6 +356,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tb-Z6-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3000.8000000000002" y="-632.83358320839591"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="e6I-kt-zhO">
+            <objects>
+                <viewController id="SWt-VP-AHL" customClass="webViewController" customModule="leisureMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FgI-W7-egi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jff-p0-fra">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NbR-sn-lsf"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Jff-p0-fra" id="PLq-ko-Dxa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvD-qt-PUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3821.5999999999999" y="-633.73313343328346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Im9-Ix-G70">

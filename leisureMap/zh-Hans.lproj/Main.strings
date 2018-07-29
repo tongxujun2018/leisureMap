@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1Bw-aa-TvJ"; */
+"1Bw-aa-TvJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9Ai-nb-teT"; */
+"9Ai-nb-teT.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "web"; ObjectID = "SE3-oA-lE4"; */
+"SE3-oA-lE4.normalTitle" = "web";
+
+/* Class = "UILabel"; text = "version"; ObjectID = "Y95-h9-Nph"; */
+"Y95-h9-Nph.text" = "version";
+
+/* Class = "UIButton"; normalTitle = "Photo"; ObjectID = "gbh-R2-1aC"; */
+"gbh-R2-1aC.normalTitle" = "Photo";
+
+/* Class = "UIButton"; normalTitle = "map"; ObjectID = "kIA-fx-abS"; */
+"kIA-fx-abS.normalTitle" = "map";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "xau-C0-azc"; */
+"xau-C0-azc.normalTitle" = "登录";
